@@ -10,7 +10,7 @@ Static page: home.test.tsx
 
 SSG: band.test.tsx
 
-MSW: Reservations component
+MSW: Reservations component (what is displayed when user clicks on tickets)
 
 ### An app to support the Udemy course [Testing Next.js Apps](https://www.udemy.com/course/nextjs-testing/)
 
@@ -28,3 +28,6 @@ MSW: Reservations component
 ## Running the App
 
 Run `npm run dev`. The app will be found at [http://localhost:3000]
+
+## Testing the App
+Run `npm t`.
