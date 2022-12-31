@@ -1,5 +1,16 @@
 # Popular Concert Venue
 
+This course shows how to test a sample Next app. Since the purpose is to show how to test the different types of files, testing is not complete. 
+
+The app being tested is a concert venue app, where the user can see what upcoming shows have tickets available, see band bios, and purchase tickets.
+
+Testing:
+
+Static page: home.test.tsx
+
+SSG: band.test.tsx
+
+MSW: Reservations component (what is displayed when user clicks on tickets)
 ### An app to support the Udemy course [Testing Next.js Apps](https://www.udemy.com/course/nextjs-testing/)
 
 ## Installation
