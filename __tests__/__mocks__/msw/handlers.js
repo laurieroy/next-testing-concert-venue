@@ -15,6 +15,8 @@ export const handlers = [
     "http://localhost:3000/api/users/:userId/reservations",
     (req, res, ctx) => {
       const { userId } = req.params;
+      // userId=0 has no reervations
+      // userId=1 has reervations
       const userReservations = Number(userId) === 1 ? fakeUserReservations : [];
 
       return res(ctx.json({ userReservations }));

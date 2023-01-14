@@ -4,6 +4,7 @@ import { UserReservations } from "@/components/user/UserReservations";
 
 test("when user already has tickets purchased, button displays `Purchase more tickets`", async () => {
   render(<UserReservations userId={1} />);
+
   const purchaseButton = await screen.findByRole("button", {
     name: /purchase more tickets/i,
   });
@@ -11,6 +12,7 @@ test("when user already has tickets purchased, button displays `Purchase more ti
 });
 test("when user has no reservations, displays no reservations and button reads 'puchase tickets'", async () => {
   render(<UserReservations userId={0} />);
+  
   const purchaseButton = await screen.findByRole("button", {
     name: /purchase tickets/i,
   });

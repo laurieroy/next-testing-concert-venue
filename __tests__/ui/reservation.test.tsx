@@ -8,7 +8,7 @@ it("reservation page shows correct number of seats available", async () => {
   const seatCountText = await screen.findByText(/10 seats left/i);
   expect(seatCountText).toBeInTheDocument();
 });
-test("reservation page shows 'sold out' messange and no purchase button if there are no seats available", async () => {
+test("reservation page shows 'sold out' message and NO purchase button if there are no seats available", async () => {
   render(<Reservation showId={1} submitPurchase={jest.fn()} />);
 
   const soldOutMessage = await screen.findByRole("heading", {
