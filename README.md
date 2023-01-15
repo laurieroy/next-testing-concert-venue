@@ -57,6 +57,14 @@ In another terminal:
 
 `npm run cypress:build`
 
+and for subsequent runs:
+
+`npm cypress:open`
+
+This opens a cypress console. On the right is a button to select the browser from a dropdown list.
+
+The available integration tests ar shown in a list, you can click on an individual test to run it. This opens a runner window.
+
 
 
 
