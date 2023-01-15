@@ -11,6 +11,10 @@ Static page: home.test.tsx
 SSG: band.test.tsx
 
 MSW: Reservations component (what is displayed when user clicks on tickets)
+
+Routes: Using cypress against the prod version, and the testing-library way 
+
+
 ### An app to support the Udemy course [Testing Next.js Apps](https://www.udemy.com/course/nextjs-testing/)
 
 ## Installation
@@ -25,6 +29,34 @@ MSW: Reservations component (what is displayed when user clicks on tickets)
 
   - command to generate a random string: `openssl rand -base64 32`
 
+  - add needed paths and keys
+
 ## Running the App
 
 Run `npm run dev`. The app will be found at [http://localhost:3000]
+
+## To run [cypress](cypress.io)
+- I am initially building the tests in v9, but will run the migration later. (To use cypress < v12, install @testing-library/cypress@8 version.)
+
+- App should be running in your browser
+`npm start`
+
+- Use the :test to run against the test db
+
+- Add cypress to the path (e.g., on a default mac running catalina,  ~/.zprofile)
+
+(first time)
+In another terminal:
+`npm run cypress`
+
+`cypress open`
+- Note: This might take 2 attempts
+
+
+- Build the app in the test environment (resetting the db), start cypress and when ready run tests, then open cypress
+
+`npm run cypress:build`
+
+
+
+
