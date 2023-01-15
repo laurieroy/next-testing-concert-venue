@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /// <reference types="cypress" />
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
@@ -12,8 +13,8 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { resetDb } = require("../../__tests__/__mocks__/db/utils/reset-db");
+const { addBand } = require("../../lib/features/bands/queries");
 
 /**
  * @type {Cypress.PluginConfig}
@@ -24,5 +25,6 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
   on("task", {
     "db:reset": () => resetDb().then(() => null),
+    addBand: (newBand) => addBand(newBand).then(() => null),
   });
 };
