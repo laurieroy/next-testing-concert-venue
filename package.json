@@ -3,6 +3,7 @@
   "scripts": {
     "cypress:build": "npm run build:test && npm run cypress:start",
     "cypress:open": "env-cmd -f .env.test.local cypress open",
+    "cypress:run": "start-server-and-test start:test http://127.0.0.1:3000 --expect 200 'env-cmd -f .env.test.local cypress run'",
     "cypress:start": "start-server-and-test --expect 200 start:test http://127.0.0.1:3000 cypress:open",
     "db:reset": "source scripts/reset-db.sh",
     "dev": "next dev",
